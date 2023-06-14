@@ -1,0 +1,28 @@
+$majorColor: #c1272d;
+$minorColor: #c7b299;
+
+@mixin smallScreen {
+  @media (min-width: 1281px) {
+    @content;
+  }
+}
+@mixin desktops {
+  @media (min-width: 997px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (min-width: 577px) {
+    @content;
+  }
+}
+@mixin min {
+  @media (min-width: 351px) {
+    @content;
+  }
+}
