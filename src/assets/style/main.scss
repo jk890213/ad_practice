@@ -1,6 +1,3 @@
-$majorColor: #c1272d;
-$minorColor: #c7b299;
-
 @mixin smallScreen {
   @media (min-width: 1281px) {
     @content;

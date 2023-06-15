@@ -1,5 +1,6 @@
 <template>
   <Banner />
+  <AwardsCarousel />
   <nav class="mobile_nav">
     <ul>
       <li><a href=""> 地圖導航 </a></li>
@@ -8,14 +9,18 @@
       <li><a href=""> Line@ </a></li>
     </ul>
   </nav>
+
+  <footer></footer>
 </template>
 
 <script setup lang="ts">
 import Banner from "@/components/Banner.vue";
+import AwardsCarousel from "@/components/AwardsCarousel.vue";
 </script>
 
 <style lang="scss" scoped>
 .mobile_nav {
+  height: 60px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -25,7 +30,7 @@ import Banner from "@/components/Banner.vue";
   }
 
   ul {
-    height: 60px;
+    height: 100%;
     display: flex;
 
     li {
@@ -45,5 +50,9 @@ import Banner from "@/components/Banner.vue";
       border-left: 1px solid #fff;
     }
   }
+}
+
+footer {
+  height: 200px;
 }
 </style>

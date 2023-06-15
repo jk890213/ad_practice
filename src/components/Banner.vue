@@ -43,6 +43,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
 
 <style lang="scss" scoped>
 .wrapper {
+  margin-bottom: 62px;
   width: 100%;
   height: calc(100vh - 60px - 2px);
   background-image: url("@/assets/images/banner/bg.jpg");
