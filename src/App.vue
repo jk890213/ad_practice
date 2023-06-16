@@ -1,14 +1,7 @@
 <template>
   <Banner />
   <AwardsCarousel />
-  <nav class="mobile_nav">
-    <ul>
-      <li><a href=""> 地圖導航 </a></li>
-      <li><a href=""> 撥打電話 </a></li>
-      <li><a href=""> Facebook </a></li>
-      <li><a href=""> Line@ </a></li>
-    </ul>
-  </nav>
+  <MobileNav/>
 
   <footer></footer>
 </template>
@@ -16,43 +9,37 @@
 <script setup lang="ts">
 import Banner from "@/components/Banner.vue";
 import AwardsCarousel from "@/components/AwardsCarousel.vue";
+import MobileNav from "@/components/MobileNav.vue";
+import { onMounted } from "vue";
+
+onMounted(() => {
+  const observer = new IntersectionObserver(callback);
+  const allImgs = document.querySelectorAll('.fadeInImg');
+  if (allImgs.length) {
+    allImgs.forEach((ele) => {
+      observer.observe(ele)
+    })
+  }
+})
+const callback = (entries: any[], observer: IntersectionObserver) => {
+  entries.forEach(entry => {
+    console.log(entry.isIntersecting);
+    console.log(entry.intersectionRatio);
+    
+    if (entry.isIntersecting && entry.intersectionRatio > 0) {
+      entry.target.classList.add('show')
+      observer.unobserve(entry.target);
+    }
+  });
+}
 </script>
 
-<style lang="scss" scoped>
-.mobile_nav {
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-
-  @include desktops {
-    display: none;
-  }
-
-  ul {
-    height: 100%;
-    display: flex;
-
-    li {
-      flex-grow: 1;
-      background-color: #325e46;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-    }
-
-    li + li {
-      border-left: 1px solid #fff;
-    }
-  }
+<style lang="scss">
+.fadeInImg {
+  opacity: 0;
 }
 
 footer {
-  height: 200px;
+  height: 1000px;
 }
 </style>

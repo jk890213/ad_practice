@@ -8,9 +8,9 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ACarousel: typeof import('ant-design-vue/es')['Carousel']
-    AInput: typeof import('ant-design-vue/es')['Input']
     AwardsCarousel: typeof import('./src/components/AwardsCarousel.vue')['default']
     Banner: typeof import('./src/components/Banner.vue')['default']
+    MobileNav: typeof import('./src/components/MobileNav.vue')['default']
     ScrolledSection: typeof import('./src/components/ScrolledSection.vue')['default']
   }
 }
