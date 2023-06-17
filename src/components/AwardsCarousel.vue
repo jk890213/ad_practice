@@ -1,23 +1,19 @@
 <template>
-  <ScrolledSection>
-    <template #container>
-      <div class="wrapper">
-        <div class="container">
-          <div class="text">
-            <h1>{{ article.title }}</h1>
-            <p>{{ article.text }}</p>
-            <h2>{{ article.subTitle }}</h2>
-            <p v-for="txt in article.awards" :key="txt">{{ txt }}</p>
-          </div>
-          <a-carousel effect="fade" :beforeChange="changeDescription" autoplay>
-            <div><img src="@/assets/images/awards/ad1.jpg" alt="" /></div>
-            <div><img src="@/assets/images/awards/ad8.jpg" alt="" /></div>
-            <div><img src="@/assets/images/awards/ad9.jpg" alt="" /></div>
-          </a-carousel>
-        </div>
+  <section class="wrapper">
+    <div class="container">
+      <div class="text">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.text }}</p>
+        <h2>{{ article.subTitle }}</h2>
+        <p v-for="txt in article.awards" :key="txt">{{ txt }}</p>
       </div>
-    </template>
-  </ScrolledSection>
+      <a-carousel effect="fade" :beforeChange="changeDescription" autoplay>
+        <div><img src="@/assets/images/awards/ad1.jpg" alt="" /></div>
+        <div><img src="@/assets/images/awards/ad8.jpg" alt="" /></div>
+        <div><img src="@/assets/images/awards/ad9.jpg" alt="" /></div>
+      </a-carousel>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -75,15 +71,9 @@ const changeDescription = () => {
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: "Noto Serif TC";
-  src: url("@/assets/font/NotoSerifTC-Regular.otf") format("opentype"),
-    url("@/assets/font/NotoSerifTC-Light.otf") format("opentype"),
-    url("@/assets/font/NotoSerifTC-ExtraLight.otf") format("opentype"),
-    url("@/assets/font/NotoSerifTC-Medium.otf") format("opentype");
-}
 .wrapper {
   padding: 0 12px;
+  margin-bottom: 50px;
 }
 
 .container {

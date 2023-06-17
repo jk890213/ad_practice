@@ -10,6 +10,7 @@ declare module 'vue' {
     ACarousel: typeof import('ant-design-vue/es')['Carousel']
     AwardsCarousel: typeof import('./src/components/AwardsCarousel.vue')['default']
     Banner: typeof import('./src/components/Banner.vue')['default']
+    DescriptionSection: typeof import('./src/components/DescriptionSection.vue')['default']
     MobileNav: typeof import('./src/components/MobileNav.vue')['default']
     ScrolledSection: typeof import('./src/components/ScrolledSection.vue')['default']
   }

@@ -1,3 +1,8 @@
+@mixin middleScreen {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
 @mixin smallScreen {
   @media (min-width: 1281px) {
     @content;
@@ -24,17 +29,17 @@
   }
 }
 
-@mixin fadeAndMoveUpAnimation($delay: 0s, $time: 1s) {  
+@mixin fadeAndMoveUpAnimation($delay: 0s, $time: 1s) {
   animation: fadeAndMoveUp $time ease-in-out forwards;
   animation-delay: $delay;
 }
 
-@mixin fadeAndMoveRightAnimation($delay: 0s, $time: 1s) {  
+@mixin fadeAndMoveRightAnimation($delay: 0s, $time: 1s) {
   animation: fadeAndMoveRight $time ease-in-out forwards;
   animation-delay: $delay;
 }
 
-@mixin fadeAndMoveLeftAnimation($delay: 0s, $time: 1s) {  
+@mixin fadeAndMoveLeftAnimation($delay: 0s, $time: 1s) {
   animation: fadeAndMoveLeft $time ease-in-out forwards;
   animation-delay: $delay;
 }
@@ -70,4 +75,12 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@font-face {
+  font-family: "Noto Serif TC";
+  src: url("@/assets/font/NotoSerifTC-Regular.otf") format("opentype"),
+    url("@/assets/font/NotoSerifTC-Light.otf") format("opentype"),
+    url("@/assets/font/NotoSerifTC-ExtraLight.otf") format("opentype"),
+    url("@/assets/font/NotoSerifTC-Medium.otf") format("opentype");
 }

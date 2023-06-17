@@ -1,40 +1,36 @@
 <template>
-  <ScrolledSection>
-    <template #container>
-      <div class="wrapper" id="test">
-        <div class="container">
-          <div class="txt1">
-            <img class="fadeInImg" src="@/assets/images/banner/txt1.svg" alt="說明文字" />
-          </div>
-          <div class="logo">
-            <div>
-              <img class="fadeInImg" src="@/assets/images/banner/img1.png" alt="" />
-            </div>
-            <div>
-              <img class="fadeInImg" src="@/assets/images/banner/logo.svg" alt="" />
-            </div>
-            <div>
-              <img class="fadeInImg" src="@/assets/images/banner/img2.png" alt="" />
-            </div>
-          </div>
-          <div class="txt2">
-            <img class="fadeInImg" src="@/assets/images/banner/txt2.svg" alt="說明文字" />
-          </div>
-          <div class="txt3">
-            <img class="fadeInImg" src="@/assets/images/banner/txt3.svg" alt="說明文字" />
-          </div>
-          <div class="decoration">
-            <div>
-              <img class="fadeInImg" src="@/assets/images/banner/img3.png" alt="" />
-            </div>
-            <div>
-              <img class="fadeInImg" src="@/assets/images/banner/img4.png" alt="" />
-            </div>
-          </div>
+  <section class="wrapper">
+    <div class="container">
+      <div class="txt1">
+        <img class="fadeInElement" src="@/assets/images/banner/txt1.svg" alt="說明文字" />
+      </div>
+      <div class="logo">
+        <div>
+          <img class="fadeInElement" src="@/assets/images/banner/img1.png" alt="" />
+        </div>
+        <div>
+          <img class="fadeInElement" src="@/assets/images/banner/logo.svg" alt="" />
+        </div>
+        <div>
+          <img class="fadeInElement" src="@/assets/images/banner/img2.png" alt="" />
         </div>
       </div>
-    </template>
-  </ScrolledSection>
+      <div class="txt2">
+        <img class="fadeInElement" src="@/assets/images/banner/txt2.svg" alt="說明文字" />
+      </div>
+      <div class="txt3">
+        <img class="fadeInElement" src="@/assets/images/banner/txt3.svg" alt="說明文字" />
+      </div>
+      <div class="decoration">
+        <div>
+          <img class="fadeInElement" src="@/assets/images/banner/img3.png" alt="" />
+        </div>
+        <div>
+          <img class="fadeInElement" src="@/assets/images/banner/img4.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -97,9 +93,9 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
 
       div {
         &:first-child {
-          width: 25%;          
+          width: 25%;
 
-          .fadeInImg.show {
+          .fadeInElement.show {
             @include fadeAndMoveRightAnimation(.2s)
           }
         }
@@ -107,7 +103,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
         &:last-child {
           width: 25%;
 
-          .fadeInImg.show {
+          .fadeInElement.show {
             @include fadeAndMoveLeftAnimation(.2s)
           }
         }
@@ -119,7 +115,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
             width: 20%;
           }
 
-          .fadeInImg.show {
+          .fadeInElement.show {
             @include fadeAndMoveUpAnimation(.2s)
           }
         }
@@ -139,7 +135,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
         width: 44%;
       }
 
-      .fadeInImg.show {
+      .fadeInElement.show {
         @include fadeAndMoveUpAnimation(.4s)
       }
     }
@@ -153,7 +149,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
         width: 36%;
       }
 
-      .fadeInImg.show {
+      .fadeInElement.show {
         @include fadeAndMoveUpAnimation(.5s)
       }
     }
@@ -166,7 +162,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
         &:first-child {
           width: 15%;
 
-          .fadeInImg.show {
+          .fadeInElement.show {
             @include fadeAndMoveRightAnimation(.8s)
           }
         }
@@ -174,7 +170,7 @@ import ScrolledSection from "@/components/ScrolledSection.vue";
         &:last-child {
           width: 85%;
 
-          .fadeInImg.show {
+          .fadeInElement.show {
             @include fadeAndMoveLeftAnimation(.8s)
           }
         }
