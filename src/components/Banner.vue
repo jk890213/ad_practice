@@ -33,10 +33,6 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import ScrolledSection from "@/components/ScrolledSection.vue";
-</script>
-
 <style lang="scss" scoped>
 .wrapper {
   margin-bottom: 62px;

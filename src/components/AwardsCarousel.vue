@@ -101,6 +101,10 @@ const changeDescription = () => {
     max-width: 1140px;
   }
 
+  @include middleScreen {
+    max-width: 1320px;
+  }
+
   .text {
     margin-bottom: 8px;
 

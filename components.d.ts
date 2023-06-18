@@ -11,6 +11,7 @@ declare module 'vue' {
     AwardsCarousel: typeof import('./src/components/AwardsCarousel.vue')['default']
     Banner: typeof import('./src/components/Banner.vue')['default']
     DescriptionSection: typeof import('./src/components/DescriptionSection.vue')['default']
+    LocationPicture: typeof import('./src/components/LocationPicture.vue')['default']
     MobileNav: typeof import('./src/components/MobileNav.vue')['default']
     ScrolledSection: typeof import('./src/components/ScrolledSection.vue')['default']
   }
