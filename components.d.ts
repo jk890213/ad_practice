@@ -14,5 +14,7 @@ declare module 'vue' {
     LocationPicture: typeof import('./src/components/LocationPicture.vue')['default']
     MobileNav: typeof import('./src/components/MobileNav.vue')['default']
     ScrolledSection: typeof import('./src/components/ScrolledSection.vue')['default']
+    TrafficAndView: typeof import('./src/components/TrafficAndView.vue')['default']
+    TrafficSection: typeof import('./src/components/TrafficSection.vue')['default']
   }
 }

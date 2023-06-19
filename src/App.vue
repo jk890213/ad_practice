@@ -4,6 +4,7 @@
   <MobileNav />
   <DescriptionSection />
   <LocationPicture />
+  <TrafficAndView/>
   <footer></footer>
 </template>
 
@@ -13,6 +14,7 @@ import AwardsCarousel from "@/components/AwardsCarousel.vue";
 import MobileNav from "@/components/MobileNav.vue";
 import DescriptionSection from "@/components/DescriptionSection.vue";
 import LocationPicture from "@/components/LocationPicture.vue";
+import TrafficAndView from "@/components/TrafficAndView.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {

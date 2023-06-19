@@ -36,7 +36,11 @@
 <style lang="scss" scoped>
 section {
     padding: 0 12px;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
+
+    @include desktops {
+        margin-bottom: 160px;
+    }
 
     .container {
         font-family: "Noto Serif TC", sans-serif;

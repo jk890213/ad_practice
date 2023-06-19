@@ -73,7 +73,7 @@ const changeDescription = () => {
 <style lang="scss" scoped>
 .wrapper {
   padding: 0 12px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 }
 
 .container {

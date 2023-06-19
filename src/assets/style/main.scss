@@ -34,6 +34,11 @@
   animation-delay: $delay;
 }
 
+@mixin fadeAndMoveDownAnimation($delay: 0s, $time: 1s) {
+  animation: fadeAndMoveDown $time ease-in-out forwards;
+  animation-delay: $delay;
+}
+
 @mixin fadeAndMoveRightAnimation($delay: 0s, $time: 1s) {
   animation: fadeAndMoveRight $time ease-in-out forwards;
   animation-delay: $delay;
@@ -48,6 +53,17 @@
   0% {
     opacity: 0;
     transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeAndMoveDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
