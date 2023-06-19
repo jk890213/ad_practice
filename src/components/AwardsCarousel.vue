@@ -79,6 +79,7 @@ const changeDescription = () => {
 .container {
   font-family: "Noto Serif TC", sans-serif;
   letter-spacing: 2px;
+  line-height: 2;
   margin: 0 auto;
 
   @include phone {

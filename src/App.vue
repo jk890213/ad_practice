@@ -1,11 +1,11 @@
 <template>
   <Banner />
   <AwardsCarousel />
-  <MobileNav />
   <DescriptionSection />
   <LocationPicture />
   <TrafficAndView/>
   <footer></footer>
+  <MobileNav />
 </template>
 
 <script setup lang="ts">

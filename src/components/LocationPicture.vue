@@ -41,6 +41,10 @@ section {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 2px;
 
+  @include desktops {
+    margin-bottom: 160px;
+  }
+
   .title,
   .text {
     padding: 0 15px;
@@ -50,8 +54,6 @@ section {
       position: absolute;
       top: 10%;
     }
-
-
   }
 
   .title {
@@ -74,12 +76,10 @@ section {
 
         @include smallScreen {
           font-size: 20px;
-
         }
 
         @include middleScreen {
           font-size: 24px;
-
         }
       }
 
@@ -90,12 +90,10 @@ section {
 
         @include smallScreen {
           font-size: 24px;
-
         }
 
         @include middleScreen {
           font-size: 28px;
-
         }
 
       }
@@ -127,12 +125,10 @@ section {
 
       @include smallScreen {
         font-size: 16px;
-
       }
 
       @include middleScreen {
         font-size: 20px;
-
       }
     }
 
