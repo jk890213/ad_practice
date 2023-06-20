@@ -4,7 +4,7 @@
   <DescriptionSection />
   <LocationPicture />
   <TrafficAndView />
-  <!-- <PlanningAndInheritance /> -->
+  <PlanningAndInheritance />
   <footer></footer>
   <MobileNav />
 </template>

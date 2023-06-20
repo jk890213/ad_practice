@@ -1,40 +1,47 @@
 <template>
   <section>
-    <a-carousel effect="fade" autoplay>
-      <div class="pic">
-        <img src="@/assets/images/planning_and_inheritance/s4-2.jpg" alt="" />
-      </div>
-      <div class="pic">
-        <img src="@/assets/images/planning_and_inheritance/s4-4.jpg" alt="" />
-      </div>
-      <div class="pic">
-        <img src="@/assets/images/planning_and_inheritance/s4-5.jpg" alt="" />
-      </div>
-      <div class="pic">
-        <img src="@/assets/images/planning_and_inheritance/s4-6.jpg" alt="" />
-      </div>
-    </a-carousel>
-    <div class="plan">
-      <div class="text">
-        <h3>國賓與華泰飯店大規模改建</h3>
-        <h3>再造國際星級地段</h3>
-        <p>
-          中山北路的新遠見，始於政經商軸的不凡，承襲國際層峰的視野。傳產企業總部匯聚，千億企業總部與國賓飯店危老改建，一世紀的黃金歲月，將再次繁華盛放，地段增值鍍金，企業智慧與富裕傳承淵源長流。
-        </p>
+    <div class="wrapper">
+      <a-carousel effect="fade" autoplay>
         <div class="pic">
+          <img src="@/assets/images/planning_and_inheritance/s4-2.jpg" alt="" />
+        </div>
+        <div class="pic">
+          <img src="@/assets/images/planning_and_inheritance/s4-4.jpg" alt="" />
+        </div>
+        <div class="pic">
+          <img src="@/assets/images/planning_and_inheritance/s4-5.jpg" alt="" />
+        </div>
+        <div class="pic">
+          <img src="@/assets/images/planning_and_inheritance/s4-6.jpg" alt="" />
+        </div>
+        <div class="pic mobile_pic">
           <img src="@/assets/images/planning_and_inheritance/s4-1.jpg" alt="" />
         </div>
-        <div>
-          <h2>上海、陽信雙總部 金融重磅版圖</h2>
+      </a-carousel>
+      <div class="plan">
+        <div class="text">
+          <h3><span>國賓與華泰飯店大規模改建</span><span>再造國際星級地段</span></h3>
           <p>
-            「上海商銀總部」與「陽信銀行總部」2大金庫高瞻對望，鄰近國賓飯店改建、大同總部開發...等重大開發領銜，定錨金融特區，燙金門牌與未來榮景潛力無限。
+            中山北路的新遠見，始於政經商軸的不凡，承襲國際層峰的視野。傳產企業總部匯聚，千億企業總部與國賓飯店危老改建，一世紀的黃金歲月，將再次繁華盛放，地段增值鍍金，企業智慧與富裕傳承淵源長流。
           </p>
-        </div>
-        <div>
-          <h2>北美館擴建計劃 打造森林美術館</h2>
-          <p>
-            「林中蘊藝，藝中觀林」為設計理念，以北美館為核心，串聯花博公園美術園區、新生公園與中山北路等，打造一條文化藝術、自然綠意與都市景觀交織而成的文化綠廊，為北市種下一座蘊藏豐沛藝文能量的森林藝術園區。
-          </p>
+          <div class="pic pc_pic">
+            <img src="@/assets/images/planning_and_inheritance/s4-1.jpg" alt="" />
+          </div>
+          <div>
+            <h3>上海、陽信雙總部 金融重磅版圖</h3>
+            <p>
+              「上海商銀總部」與「陽信銀行總部」2大金庫高瞻對望，鄰近國賓飯店改建、大同總部開發...等重大開發領銜，定錨金融特區，燙金門牌與未來榮景潛力無限。
+            </p>
+          </div>
+          <div>
+            <h3>北美館擴建計劃 打造森林美術館</h3>
+            <p>
+              「林中蘊藝，藝中觀林」為設計理念，以北美館為核心，串聯花博公園美術園區、新生公園與中山北路等，打造一條文化藝術、自然綠意與都市景觀交織而成的文化綠廊，為北市種下一座蘊藏豐沛藝文能量的森林藝術園區。
+            </p>
+          </div>
+          <div class="pic decoration">
+            <img src="@/assets/images/planning_and_inheritance/ill-10.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -84,6 +91,7 @@
 .pic img {
   width: 100%;
 }
+
 .text {
   padding: 0 15px;
   letter-spacing: 1.5px;
@@ -91,22 +99,116 @@
 
   h2 {
     font-size: 18px;
+    font-weight: bold;
   }
 
   h3 {
+    margin: 0;
     font-size: 16px;
+    font-weight: bold;
+
+    @include desktops {
+      font-size: 14px;
+    }
+
+    @include smallScreen {
+      font-size: 20px;
+    }
+
+    @include middleScreen {
+      font-size: 22px;
+    }
+
+    span {
+      display: block;
+
+      @include desktops {
+        display: inline;
+      }
+    }
+
+    span+span {
+      margin-bottom: 30px;
+
+      @include desktops {
+        margin: 0 0 0 8px;
+      }
+    }
   }
 
   p {
     font-size: 15px;
+    font-weight: bold;
+
+    @include desktops {
+      font-size: 12px;
+      font-weight: normal;
+    }
+
+    @include smallScreen {
+      font-size: 16px;
+    }
+
+    @include middleScreen {
+      font-size: 20px;
+    }
+  }
+}
+
+.wrapper {
+  margin-bottom: 48px;
+  
+  @include desktops {
+    display: flex;
+    margin-bottom: 160px;
+
+    :deep .ant-carousel {
+      width: 50%;
+    }
   }
 }
 
 .plan {
   padding-top: 30px;
 
+  @include desktops {
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
   .pic {
     margin: 30px 0;
+  }
+
+  .pc_pic {
+    @include desktops {
+      display: none;
+    }
+  }
+
+  .decoration {
+    margin-left: 50%;
+    width: 50%;
+
+    @include desktops {
+      position: absolute;
+      right: 10px;
+      bottom: -15%;
+      margin-left: 0;
+      width: 30%;
+    }
+  }
+
+  .mobile_pic {
+    display: none;
+
+    @include desktops {
+      display: block;
+    }
   }
 }
 </style>
