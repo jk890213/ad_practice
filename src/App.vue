@@ -3,7 +3,8 @@
   <AwardsCarousel />
   <DescriptionSection />
   <LocationPicture />
-  <TrafficAndView/>
+  <TrafficAndView />
+  <!-- <PlanningAndInheritance /> -->
   <footer></footer>
   <MobileNav />
 </template>
@@ -15,6 +16,7 @@ import MobileNav from "@/components/MobileNav.vue";
 import DescriptionSection from "@/components/DescriptionSection.vue";
 import LocationPicture from "@/components/LocationPicture.vue";
 import TrafficAndView from "@/components/TrafficAndView.vue";
+import PlanningAndInheritance from "@/components/PlanningAndInheritance.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -28,8 +30,6 @@ onMounted(() => {
 });
 const callback = (entries: any[], observer: IntersectionObserver) => {
   entries.forEach((entry) => {
-    console.log(entry.isIntersecting);
-
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
       observer.unobserve(entry.target);

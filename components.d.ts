@@ -13,8 +13,8 @@ declare module 'vue' {
     DescriptionSection: typeof import('./src/components/DescriptionSection.vue')['default']
     LocationPicture: typeof import('./src/components/LocationPicture.vue')['default']
     MobileNav: typeof import('./src/components/MobileNav.vue')['default']
+    PlanningAndInheritance: typeof import('./src/components/PlanningAndInheritance.vue')['default']
     ScrolledSection: typeof import('./src/components/ScrolledSection.vue')['default']
     TrafficAndView: typeof import('./src/components/TrafficAndView.vue')['default']
-    TrafficSection: typeof import('./src/components/TrafficSection.vue')['default']
   }
 }
