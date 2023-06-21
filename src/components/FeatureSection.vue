@@ -70,7 +70,7 @@ section {
   background: #f1f1f1;
 
   @include desktops {
-    margin-bottom: 160px;
+    margin-bottom: 96px;
   }
 
   .container {

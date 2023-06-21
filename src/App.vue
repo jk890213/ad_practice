@@ -6,6 +6,7 @@
   <TrafficAndView />
   <PlanningAndInheritance />
   <FeatureSection />
+  <BuildingStyle />
   <footer></footer>
   <MobileNav />
 </template>
@@ -19,6 +20,7 @@ import LocationPicture from "@/components/LocationPicture.vue";
 import TrafficAndView from "@/components/TrafficAndView.vue";
 import PlanningAndInheritance from "@/components/PlanningAndInheritance.vue";
 import FeatureSection from "@/components/FeatureSection.vue";
+import BuildingStyle from "@/components/BuildingStyle.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {
