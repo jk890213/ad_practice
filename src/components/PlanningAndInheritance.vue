@@ -44,7 +44,7 @@
               「林中蘊藝，藝中觀林」為設計理念，以北美館為核心，串聯花博公園美術園區、新生公園與中山北路等，打造一條文化藝術、自然綠意與都市景觀交織而成的文化綠廊，為北市種下一座蘊藏豐沛藝文能量的森林藝術園區。
             </p>
           </div>
-          <div class="pic decoration">
+          <div class="pic decoration fadeInElement">
             <img
               src="@/assets/images/planning_and_inheritance/ill-10.png"
               alt=""
@@ -55,7 +55,7 @@
     </div>
     <div class="inheritance">
       <div class="bg">
-        <div class="pic">
+        <div class="pic fadeInElement">
           <img src="@/assets/images/planning_and_inheritance/kite.gif" alt="" />
           <img
             src="@/assets/images/planning_and_inheritance/ill-11.png"
@@ -91,7 +91,7 @@
             協律：「好宅比豪宅更重要。」「產品的熱情與堅持來自於不妥協。」，面對營建成本攀高與市場洗牌，產品如何定位，長住久安、好看保值等皆是工夫。適切的規劃，滿足都會小家庭的需求，好住好用好維護，以中大坪數的規格起造，發揮基地與環境特色！建築本真，愛上源自生活的美麗
             。
           </p>
-          <div class="pic">
+          <div class="pic fadeInElement">
             <img
               src="@/assets/images/planning_and_inheritance/ill-12.png"
               alt=""
@@ -236,6 +236,10 @@
     }
   }
 
+  .decoration.show {
+    @include bounceInAnimation();
+  }
+
   .mobile_pic {
     display: none;
 
@@ -259,10 +263,8 @@ hr {
   }
 }
 .inheritance {
-  margin-bottom: 48px;
-
   @include desktops {
-    margin-bottom: 160px;
+    margin-bottom: 80px;
   }
 
   .bg {
@@ -301,6 +303,10 @@ hr {
           position: absolute;
         }
       }
+    }
+
+    .pic.show {
+      @include fadeAndMoveUpAnimation();
     }
 
     > .text {
@@ -351,9 +357,15 @@ hr {
       }
     }
     > .text {
+      padding-bottom: 40px;
+
       > .pic {
         margin-left: 25%;
         width: 70%;
+      }
+
+      > .pic.show {
+        @include fadeAndMoveRightAnimation();
       }
     }
 
