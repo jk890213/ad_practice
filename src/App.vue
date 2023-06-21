@@ -7,6 +7,7 @@
   <PlanningAndInheritance />
   <FeatureSection />
   <BuildingStyle />
+  <Reservation />
   <footer></footer>
   <MobileNav />
 </template>
@@ -21,6 +22,7 @@ import TrafficAndView from "@/components/TrafficAndView.vue";
 import PlanningAndInheritance from "@/components/PlanningAndInheritance.vue";
 import FeatureSection from "@/components/FeatureSection.vue";
 import BuildingStyle from "@/components/BuildingStyle.vue";
+import Reservation from "@/components/Reservation.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {

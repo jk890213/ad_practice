@@ -11,8 +11,14 @@
           </p>
         </div>
         <div class="content">
-          <h3>都會靈感、人文意象、生態向度的新現代住宅</h3>
-          <div class="item" v-for="{ title, text } in items" :key="title">
+          <h3 class="fadeInElement">
+            都會靈感、人文意象、生態向度的新現代住宅
+          </h3>
+          <div
+            class="item fadeInElement"
+            v-for="{ title, text } in items"
+            :key="title"
+          >
             <p>
               <span>{{ title }}</span
               >{{ text }}
@@ -62,10 +68,8 @@ const items = [
 }
 
 section {
-  margin-bottom: 48px;
-
   @include desktops {
-    margin-bottom: 160px;
+    margin-bottom: 48px;
   }
 
   .container {
@@ -177,6 +181,20 @@ p {
     @include desktops {
       display: inline;
       font-weight: normal;
+    }
+  }
+
+  h3.show {
+    @include fadeAndMoveUpAnimation();
+  }
+
+  .item.show {
+    $itemLength: 6;
+    @for $i from 1 through $itemLength {
+      &:nth-child(#{$i + 1}) {
+        $ms: ($i - 1) * 0.1;
+        @include fadeAndMoveLeftAnimation(#{$ms}s);
+      }
     }
   }
 }
