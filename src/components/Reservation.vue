@@ -30,6 +30,39 @@
           </a>
         </div>
       </div>
+      <div id="reserve_form">
+        <h1>預約賞屋</h1>
+        <p>全案不二價銷售</p>
+
+        <div class="info">
+          <div class="item ">
+            <input type="text" :value="formState.username" placeholder="*姓名">
+          </div>
+          <div class="item ">
+            <input type="text" :value="formState.phoneNumber" placeholder="*電話">
+          </div>
+          <div class="item ">
+            <select :value="formState.connectTime" placeholder="*聯絡時間">
+              <option v-for="{ value, label } in timeOptions" :value="value">{{ label }}</option>
+            </select>
+          </div>
+          <div class="item">
+            <input type="email" :value="formState.email" placeholder="E-mail">
+          </div>
+          <div class="item">
+            <textarea rows="10" :value="(formState.message as string)" placeholder="留言" />
+          </div>
+        </div>
+
+        <div class="checking_info">
+          <input type="checkbox" id="checkbox">
+          <label for="checkbox">本人知悉並同意『隱私權政策規範』的內容</label>
+        </div>
+
+        <div class="submit_btn">
+          <button>立即預約</button>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -39,7 +72,7 @@ import map from "@/assets/images/reservation/map.png";
 import phone from "@/assets/images/reservation/phone.png";
 import facebook from "@/assets/images/reservation/facebook.png";
 import line from "@/assets/images/reservation/line.png";
-
+import { reactive } from "vue";
 
 const features = [
   "投資興建：協律有限公司",
@@ -67,12 +100,39 @@ const links = [{
   imgUrl: line,
   linkUrl: "https://lin.ee/B9sG5h7"
 },]
+
+type FormState = {
+  username: String
+  phoneNumber: String
+  connectTime: String
+  email: String
+  message: String
+}
+const formState = reactive<FormState>({
+  username: '',
+  phoneNumber: '',
+  connectTime: '',
+  email: '',
+  message: '',
+});
+const timeOptions = [
+  { value: '', label: '*方便電話聯繫時間', },
+  { value: '01', label: '早上', },
+  { value: '02', label: '中午', },
+  { value: '03', label: '晚上', }
+]
+const sendUserInfo = () => {
+  //
+}
 </script>
 
 <style lang="scss" scoped>
 section {
   padding: 80px 12px;
   background-image: url("@/assets/images/reservation/bg2.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .container {
     margin: 0 auto;
@@ -161,7 +221,11 @@ section {
 }
 
 .text {
-  margin-bottom: 50px;
+  margin-bottom: 48px;
+
+  @include desktops {
+    margin-bottom: 80px;
+  }
 
   .pic {
     width: 35%;
@@ -218,10 +282,11 @@ section {
 
 .social_link {
   display: none;
+  margin-bottom: 80px;
 
   @include desktops {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .item {
       width: 16%;
@@ -253,6 +318,109 @@ section {
 
     .item.show {
       @include bounceInAnimation();
+    }
+  }
+}
+
+#reserve_form {
+  max-width: 880px;
+  margin: 0 auto;
+
+  @include desktops {
+    .info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+
+      .item {
+        width: 45%;
+
+        &:last-child {
+          margin: 0 auto;
+          width: calc(90% + 20px);
+        }
+      }
+    }
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 18px;
+
+    @include desktops {
+      font-size: 22px;
+    }
+
+    @include smallScreen {
+      font-size: 28px;
+    }
+
+    @include middleScreen {
+      font-size: 34px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #ce0000;
+
+    @include desktops {
+      font-size: 12px;
+    }
+
+    @include smallScreen {
+      font-size: 16px;
+    }
+
+    @include middleScreen {
+      font-size: 20px;
+    }
+  }
+
+  .item {
+    padding-bottom: 20px;
+
+    input,
+    select,
+    textarea {
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #727171;
+      width: 100%;
+    }
+
+    input,
+    select {
+      height: 45px;
+    }
+  }
+
+  .checking_info {
+    text-align: center;
+    margin-bottom: 30px;
+
+    input {
+      margin-right: 8px;
+    }
+  }
+
+  .submit_btn {
+    margin: 0 auto;
+    text-align: center;
+
+    button {
+      width: 160px;
+      height: 56px;
+      border: 0;
+      font-size: 26px;
+      background-color: #a48b78;
+      color: #fff;
+      opacity: .6;
     }
   }
 }
