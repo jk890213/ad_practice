@@ -421,6 +421,10 @@ section {
       background-color: #a48b78;
       color: #fff;
       opacity: .6;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }

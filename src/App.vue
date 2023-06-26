@@ -8,8 +8,13 @@
   <FeatureSection />
   <BuildingStyle />
   <Reservation />
-  <GoogleMap/>
+  <GoogleMap />
   <MobileNav />
+  <div id="reserve">
+    <a href="#reserve_form">
+      <img :src="btn" alt="">
+    </a>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -25,6 +30,7 @@ import BuildingStyle from "@/components/BuildingStyle.vue";
 import Reservation from "@/components/Reservation.vue";
 import GoogleMap from "@/components/GoogleMap.vue";
 import { onMounted } from "vue";
+import btn from "@/assets/images/reservation/btn.jpg";
 
 onMounted(() => {
   const observer = new IntersectionObserver(callback);
@@ -46,11 +52,30 @@ const callback = (entries: any[], observer: IntersectionObserver) => {
 </script>
 
 <style lang="scss">
+html{
+  scroll-behavior: smooth;
+}
+
 .fadeInElement {
   opacity: 0;
 }
 
-footer {
-  height: 1000px;
+#reserve {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  @include desktops {
+    width: 80px;
+    height: 80px;
+  }
+
+  a, img{
+    width: 100%;
+  }
 }
 </style>
