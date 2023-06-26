@@ -16,11 +16,31 @@
           </p>
         </div>
       </div>
+      <div class="social_link">
+        <div class="item fadeInElement" v-for="{ imgUrl, title, linkUrl } in links" :key="title">
+          <a :href="linkUrl" target="_blank">
+            <div>
+              <div class="pic">
+                <img :src="imgUrl" alt="">
+              </div>
+              <span>
+                {{ title }}
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import map from "@/assets/images/reservation/map.png";
+import phone from "@/assets/images/reservation/phone.png";
+import facebook from "@/assets/images/reservation/facebook.png";
+import line from "@/assets/images/reservation/line.png";
+
+
 const features = [
   "投資興建：協律有限公司",
   "建築美學：詠筑建築師事務所",
@@ -29,6 +49,24 @@ const features = [
   "燈光設計：億光智能科技",
   "建照號碼：111建字第0181號",
 ];
+
+const links = [{
+  title: '地圖導航',
+  imgUrl: map,
+  linkUrl: 'https://bit.ly/3PC5EGa'
+}, {
+  title: '02-2567-4588',
+  imgUrl: phone,
+  linkUrl: 'tel:+886-2-25674588'
+}, {
+  title: 'Facebook',
+  imgUrl: facebook,
+  linkUrl: 'https://bit.ly/3oBWSMA'
+}, {
+  title: 'Line@',
+  imgUrl: line,
+  linkUrl: "https://lin.ee/B9sG5h7"
+},]
 </script>
 
 <style lang="scss" scoped>
@@ -117,11 +155,14 @@ section {
     }
   }
 }
+
 .pic img {
   width: 100%;
 }
 
 .text {
+  margin-bottom: 50px;
+
   .pic {
     width: 35%;
     margin: 0 auto 30px;
@@ -130,6 +171,7 @@ section {
       width: 10%;
     }
   }
+
   .pic.show {
     @include fadeAndMoveUpAnimation();
   }
@@ -150,6 +192,7 @@ section {
 
     .fadeInElement.show {
       $itemLength: 3;
+
       @for $i from 1 through $itemLength {
         &:nth-child(#{$i}) {
           $ms: ($i + 1) * 0.1;
@@ -162,12 +205,54 @@ section {
   .content {
     .fadeInElement.show {
       $itemLength: 6;
+
       @for $i from 1 through $itemLength {
         &:nth-child(#{$i}) {
           $ms: ($i + 4) * 0.1;
           @include fadeAndMoveUpAnimation(#{$ms}s);
         }
       }
+    }
+  }
+}
+
+.social_link {
+  display: none;
+
+  @include desktops {
+    display: flex;
+    justify-content: space-around;
+
+    .item {
+      width: 16%;
+      // padding: 48px 0;
+      border: 1px solid #000;
+      border-radius: 4px;
+      text-align: center;
+
+      .pic {
+        margin: 0 auto;
+        width: 40%;
+      }
+
+      span {
+        font-size: 20px;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #000;
+
+        >div {
+          padding: 48px 0;
+        }
+      }
+    }
+
+    .item.show {
+      @include bounceInAnimation();
     }
   }
 }

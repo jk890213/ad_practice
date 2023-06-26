@@ -16,8 +16,7 @@
     <p v-if="showHint">
       <span>可左右滑動</span>
     <div>
-      <span>&larr;</span>
-      <span>&rarr;</span>
+      <SwapOutlined :style="{ fontSize: '20px' }" />
     </div>
     </p>
   </section>
@@ -25,6 +24,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { SwapOutlined } from '@ant-design/icons-vue';
 
 const showHint = ref(true)
 const touch = () => {

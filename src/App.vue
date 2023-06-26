@@ -8,7 +8,7 @@
   <FeatureSection />
   <BuildingStyle />
   <Reservation />
-  <footer></footer>
+  <GoogleMap/>
   <MobileNav />
 </template>
 
@@ -23,6 +23,7 @@ import PlanningAndInheritance from "@/components/PlanningAndInheritance.vue";
 import FeatureSection from "@/components/FeatureSection.vue";
 import BuildingStyle from "@/components/BuildingStyle.vue";
 import Reservation from "@/components/Reservation.vue";
+import GoogleMap from "@/components/GoogleMap.vue";
 import { onMounted } from "vue";
 
 onMounted(() => {

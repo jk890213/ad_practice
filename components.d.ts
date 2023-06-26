@@ -13,6 +13,7 @@ declare module 'vue' {
     BuildingStyle: typeof import('./src/components/BuildingStyle.vue')['default']
     DescriptionSection: typeof import('./src/components/DescriptionSection.vue')['default']
     FeatureSection: typeof import('./src/components/FeatureSection.vue')['default']
+    GoogleMap: typeof import('./src/components/GoogleMap.vue')['default']
     LocationPicture: typeof import('./src/components/LocationPicture.vue')['default']
     MobileNav: typeof import('./src/components/MobileNav.vue')['default']
     PlanningAndInheritance: typeof import('./src/components/PlanningAndInheritance.vue')['default']
