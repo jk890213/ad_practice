@@ -281,7 +281,6 @@ section {
 
     @include desktops {
       top: -50px;
-      right: -30px;
       width: 20%;
     }
 

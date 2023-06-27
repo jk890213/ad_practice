@@ -1,4 +1,5 @@
 <template>
+  <div v-if="loading" class="loading">loading...</div>
   <Banner />
   <AwardsCarousel />
   <DescriptionSection />
@@ -12,7 +13,7 @@
   <MobileNav />
   <div id="reserve">
     <a href="#reserve_form">
-      <img :src="btn" alt="">
+      <img :src="btn" alt="" />
     </a>
   </div>
 </template>
@@ -29,10 +30,14 @@ import FeatureSection from "@/components/FeatureSection.vue";
 import BuildingStyle from "@/components/BuildingStyle.vue";
 import Reservation from "@/components/Reservation.vue";
 import GoogleMap from "@/components/GoogleMap.vue";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import btn from "@/assets/images/reservation/btn.jpg";
 
+const loading = ref(true);
+
 onMounted(() => {
+  loading.value = false;
+
   const observer = new IntersectionObserver(callback);
   const fadeInElement = document.querySelectorAll(".fadeInElement");
   if (fadeInElement.length) {
@@ -52,7 +57,7 @@ const callback = (entries: any[], observer: IntersectionObserver) => {
 </script>
 
 <style lang="scss">
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -74,8 +79,26 @@ html{
     height: 80px;
   }
 
-  a, img{
+  a,
+  img {
     width: 100%;
   }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+
+  color: #325e46;
+  font-size: 26px;
+  font-weight: bold;
 }
 </style>
