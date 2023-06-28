@@ -3,10 +3,10 @@
     <div class="container">
       <div class="text">
         <div class="overview">
-          <h2 class="pic fadeInElement">SRC全石材 經典雋永</h2>
-          <h2 class="pic fadeInElement">機能美學 有風有光的家</h2>
-          <h3 class="pic fadeInElement">2房2衛戶戶邊間 零虛坪雙面採光</h3>
-          <p class="pic fadeInElement">
+          <h2 class="fadeInElement">SRC全石材 經典雋永</h2>
+          <h2 class="fadeInElement">機能美學 有風有光的家</h2>
+          <h3 class="fadeInElement">2房2衛戶戶邊間 零虛坪雙面採光</h3>
+          <p class="fadeInElement">
             「中山簡美」中山北與⺠生東交匯，基地約126坪，林森北綠蔭第一排，近鄰1200坪永盛公園，均質兩房，24到30坪的規劃，戶戶邊間採光，北市罕見！以安全、舒適及智慧的家，呼應當代生活與地段能量，以雋永設計琢磨土地，打造建築不凡身價。
           </p>
         </div>
